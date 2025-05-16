@@ -1,0 +1,108 @@
+:root {
+  --background-color-main: #f5ece7;
+  --background-color-second: white;
+
+  --text-color: #000000;
+  --hover-color: #c4953c;
+
+  --header-font: 50px;
+  --header-font2: 30px;
+
+  --button-font: 35px
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pirata One', 'Courier New', Courier, monospace;
+}
+
+html, body {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.headerContent {
+    background-color: var(--background-color-main);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.navigation button {
+    font-size:  var(--button-font);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.navigation button:hover {
+    color: var(--hover-color);
+}
+
+.mainContent {
+    flex: 1;
+    background-color: var(--background-color-second);
+}
+
+.image {
+    background-image: url('images/mainMenuBackground.png'); /* Replace with your image */
+    height: 600px; /* Adjust height */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--text-color);
+    -webkit-text-stroke: 1px #7f6d5f;
+}
+
+.overlay-text h1 {
+    font-size: 180px;
+}
+
+.mainText {
+    display: flex;
+    justify-content: center;
+}
+
+.mainText h1{
+    font-size: var(--header-font);
+}
+
+.footerContent {
+    background-color: #f5ece7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerContent h1 {
+    font-size: var(--header-font2);
+}
