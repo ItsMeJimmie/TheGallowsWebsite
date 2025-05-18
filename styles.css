@@ -1,12 +1,17 @@
 :root {
-  --background-color-main: #f5ece7;
-  --background-color-second: white;
+  --background-color-main: #1d2847;
+  --background-color-second: #f5ece7;
+  --spacerColor: #c4953c;
 
   --text-color: #000000;
+  --text-color-secondary: #ffff;
   --hover-color: #c4953c;
 
   --header-font: 50px;
   --header-font2: 30px;
+  --header-font3: 40px;
+
+  --paragraph-font: 25px;
 
   --button-font: 35px
 }
@@ -35,6 +40,7 @@ html, body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 50px;
 }
 
 .navigation {
@@ -50,10 +56,16 @@ html, body {
     border: none;
     cursor: pointer;
     transition: color 0.3s;
+    color: var(--text-color-secondary);
 }
 
 .navigation button:hover {
     color: var(--hover-color);
+}
+
+.spacer {
+    background-color: #c4953c;
+    height: 10px;
 }
 
 .mainContent {
@@ -63,7 +75,7 @@ html, body {
 
 .image {
     background-image: url('images/mainMenuBackground.png'); /* Replace with your image */
-    height: 600px; /* Adjust height */
+    height: 800px; /* Adjust height */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -89,20 +101,110 @@ html, body {
 .mainText {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mainText2 {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#HOME {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.FAQContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 20px;
+}
+
+.FAQContainer p {
+    margin-bottom: 20px;
+}
+
+#FAQ {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+#FAQHeader {
+    font-size: var(--header-font3);
 }
 
 .mainText h1{
     font-size: var(--header-font);
 }
 
+.mainText p {
+    font-family: 'Crimson Text', 'Courier New', Courier, monospace;
+    font-size: var(--paragraph-font);
+}
+
 .footerContent {
-    background-color: #f5ece7;
+    background-color: var(--background-color-main);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: var(--text-color-secondary);
 }
 
 .footerContent h1 {
     font-size: var(--header-font2);
+}
+
+.footerContent p {
+    font-family: 'Crimson Text', 'Courier New', Courier, monospace;
+}
+
+.outsideLinks {
+    transition: background-color 0.3s ease;
+}
+
+.outsideLinks a, a:visited,
+a:active { 
+    color: var(--text-color-secondary);
+}
+
+.outsideLinks a:hover {
+    color: var(--hover-color);
+}
+
+.content {
+    background-color: var(--background-color-main);
+    border: 5px solid var(--spacerColor);
+    border-radius: 8px;
+    color: var(--text-color-secondary);
+    margin: 20px 20px;
+    padding: 10px 10px;
+}
+
+.content h1 {
+    padding-left: 10px;
+}
+
+.content p {
+    padding-left: 20px;
+    font-family: 'Crimson Text', 'Courier New', Courier, monospace;
+}
+
+.content ul {
+    padding-left: 50px;
+}
+
+.content button {
+    background-color: #c4953c;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid var(--background-color-main);
+    cursor: pointer;
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 5px 5px;
 }
